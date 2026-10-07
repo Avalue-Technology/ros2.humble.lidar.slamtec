@@ -32,6 +32,9 @@ source /opt/ros/humble/setup.bash
 
 cd ~/ros2_ws/src
 git clone https://github.com/Slamtec/sllidar_ros2.git
+# CAUTION. Fix incorrect Python Launcer File Name
+cd sllidar_ros2/launch
+mv 'sllidar_a2m12_launch .py' sllidar_a2m12_launch.py
 cd ~/ros2_ws/
 colcon build --symlink-install --packages-select sllidar_ros2
 ```
